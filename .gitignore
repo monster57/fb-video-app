@@ -1,3 +1,4 @@
 /node_modules
 /config/database.json
 /config/env/development.json
+/config/keys/facebook.js
