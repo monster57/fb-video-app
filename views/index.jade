@@ -1,14 +1,22 @@
-extends layout
-
-block content
-  h1= title
-  p This is Sequelize greeting you :)
-
-  h2 Creating a new user
-  form(action="/users/create", method="post")
-    input(type="text", name="username")
-    input(type="submit")
-
-  h2 Users
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", rel="stylesheet")
+  body.body-login
+    .background
+      .login
+        .login-container
+          .lg-wrapper
+            .img-logo
+              img.imagelogo(src='../images/tp.png')
+              h1.title-logo Facebook Video App
+              span.text-details Video . Stream . Live
+            .login-fb
+              a.fb-link(href='#')
+                b.fb-icon
+                  i.fa.fa-facebook-official
+                span Log in with Facebook
 
   

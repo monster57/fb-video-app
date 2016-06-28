@@ -6,3 +6,53 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*Login @page*/
+.body-login 
+{
+    padding: 0px;margin: 0px; background-image: url(../images/video-app.jpg);background-repeat: no-repeat;background-size: 100%;height: auto;
+}
+.background 
+{
+    float: left;width: 100%;height: 100%;
+}
+.login 
+{
+    float: left;width: 100%;height: 100%;
+}
+.login-container 
+{
+    width: 300px;margin: 10% auto;display: block;
+}
+.lg-wrapper 
+{
+    float: left;width: 100%;height: 100%;background: rgba(31, 52, 62, 0.55); color: #fff;padding: 30px 20px;
+}
+.img-logo 
+{
+    float: left;width: 100%;height: auto;
+}
+.imagelogo 
+{
+    float: none;width: 60px;height: 60px;display: block;margin: 0px auto;
+}
+.title-logo 
+{
+    float: left;width: 100%;text-align: center;margin: 0px;text-transform: uppercase;font-size: 22px;padding: 7px 0px;
+}
+.text-details 
+{
+    text-align: center;float: left;width: 100%;font-size: 16px;margin: 0px;
+}
+.login-fb 
+{
+    float: left;width: 100%;height: auto;margin: 50px 0px 60px 0px;position: relative;
+}
+.fb-link 
+{
+    width: 82%;float: none;background: #5d79b4;padding: 10px 15px;display: block;margin: 0px auto;color: #fff;border-radius: 3px;text-decoration: none;text-align: center;font-size: 18px;
+}
+.fb-icon 
+{
+    float: left;
+}
