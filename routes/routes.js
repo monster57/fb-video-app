@@ -18,14 +18,14 @@ function isLoggedIn(req, res, next) {
 
 router.get('/' , HomeController.getDashboard);
 router.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile', {
+        res.send({
             user : req.user // get the user out of session and pass to template
         });
 });
 
 router.get('/auth/facebook', passport.authenticate('facebook'));
 router.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { successRedirect: '/',
-                                      failureRedirect: '/login' }));
+  passport.authenticate('facebook', { successRedirect: '/profile',
+                                      failureRedirect: '/' }));
 
 module.exports = router;

@@ -3,7 +3,7 @@
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     display_name: DataTypes.STRING,
-    username:DataTypes.STRING,
+    facebook_id:DataTypes.STRING,
     gender: DataTypes.STRING,
     role: DataTypes.STRING,
     profile_image: DataTypes.STRING,
