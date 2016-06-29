@@ -28,23 +28,28 @@
      
     </video>
 </div>
+
 <script>
  	var video = document.querySelector("#videoElement");
  
 	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 	 
 	if (navigator.getUserMedia) {       
-	    navigator.getUserMedia({video: true, audio:true}, handleVideo, videoError);
+	    navigator.getUserMedia({video: true, audio:true},onSuccess, onError);
 	}
 	 
-	function handleVideo(stream) {
-	    video.src = window.URL.createObjectURL(stream);
-	}
-	 
-	function videoError(e) {
-	    // do something
-	    alert("something went wrong"+ e);
-	}
+	function onSuccess(mediaObj){
+    window.stream = mediaObj;
+    var video = document.querySelector("video");
+    video.src = window.URL.createObjectURL(mediaObj);
+    video.play();
+}
+ 
+//Our error callback where we will handle any issues
+function onError(errorObj){
+    console.log("There was an error: " + errorObj);
+}
+ 
 </script>
 </body>
 </html>
