@@ -18,9 +18,7 @@ function isLoggedIn(req, res, next) {
 
 router.get('/' , HomeController.getDashboard);
 router.get('/profile', isLoggedIn, function(req, res) {
-        res.send({
-            user : req.user // get the user out of session and pass to template
-        });
+        res.render('profile',{user : req.user});
 });
 
 router.get('/auth/facebook', passport.authenticate('facebook'));
