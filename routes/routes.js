@@ -20,6 +20,9 @@ router.get('/' , HomeController.getDashboard);
 router.get('/profile', isLoggedIn, function(req, res) {
         res.render('profile',{user : req.user});
 });
+router.get("/stream" , isLoggedIn, function(req,res){
+	res.render("stream");
+})
 
 router.get('/auth/facebook', passport.authenticate('facebook'));
 router.get('/auth/facebook/callback',
