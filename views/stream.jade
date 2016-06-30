@@ -5,62 +5,60 @@ html
     meta(content='stuff, to, help, search, engines, not', name='keywords')
     meta(content='What this page is about.', name='description')
     meta(content='Display Webcam Stream', name='title')
-    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet')
     link(href='/stylesheets/stream.css', rel='stylesheet')
     title Display Webcam Stream  
   body
      #stream-container
       .stream-video
        video#videoElement(autoplay='true')
-      .streamdropdown
-       .dropdownstream
-        span.labeltext Select Category :
-        .dropdown
-          button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
-           | Select any One 
-           span.caret
-          ul.dropdown-menu
-           li
-             a#user(tabindex='-1') User
-           li
-             a#page(tabindex='-1') Page
-       .dropdownstreamright
-        span#pagelabel.labeltext Select Page :
-        #dropright.dropdown
-          button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
-           | Select any One  
-           span.caret
-          ul.dropdown-menu
-           li
-             a#test(tabindex='-1') Test
-           li
-             a(tabindex='-1') Page
-        .stream-button
-         button#stream stream
+      .streamform
+       .formselect
+        .formselectcategory#selectpages-TF
+          label.labeltext(for='selectCategory') Select Category
+          select#show.form-control(name='select any one', form='carform')
+            option(value='0') Select any one 
+            option#selectuser(value='1') User
+            option#selectpage(value='2') Page
+        .formselectcategory#selectpages-BS(style='display:none')
+          label.labeltext(for='selectCategory') Select Page
+          select#showtest.form-control(name='select any one', form='carform')
+            option(value='0') Select any one 
+            option#selecttest(value='1') Test
+            option#selectpages(value='2') Pages
+        .formselectcategory#selectpages-SB(style='display:none')
+          label.labeltext(for='selectCategory') 
+          button#streambutton Stream
 script(src='../js/stream.js')
 script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
-script(src='../js/bootstrap.min.js')
 script.
-    $(document).ready(function(){
-    $('.dropdown-submenu a.test').on("click", function(e){
-    $(this).next('ul').toggle();
-    e.stopPropagation();
-    e.preventDefault();
-    });
-    });
-script.
-    $(document).ready(function(){
-    $('#dropright,#pagelabel,#stream').hide();
-    $('#page').click(function(){
-    $('#dropright,#pagelabel').show();
-    $('#stream').hide();
-    });
-    $('#user').click(function(){
-    $('#stream,#pagelabel').show();
-    $('#dropright').hide();
-    });
-    $('#test').click(function(){
-    $('#stream,#pagelabel').show();
-    });     
-    });
+  $("#show").change(function(){
+      if($(this).val()=="2")
+      {
+      $("#selectpages-BS").show();
+      }
+      else
+      {
+      $("#selectpages-BS").hide();
+      }
+  });
+  $("#show").change(function(){
+      if($(this).val()=="1")
+      {
+      $("#selectpages-SB").show();
+      }
+      else
+      {
+      $("#selectpages-SB").hide();
+      }
+  });
+  $("#showtest").change(function(){
+      if($(this).val()=="1")
+      {
+      $("#selectpages-SB").show();
+      }
+      else
+      {
+      $("#selectpages-SB").hide();
+      }
+  });
 

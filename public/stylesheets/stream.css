@@ -1,3 +1,7 @@
+body
+{
+    font-family: sans-serif;
+}
 #stream-container
 {
     margin: 0px auto;width: 500px;display: block;
@@ -10,39 +14,23 @@
 {
     width: auto;background-color: #666;border: 10px #333 solid;display: block;margin: 0px auto;height: 375px;box-sizing: content-box;
 }
-.dropdown
+.formselect 
 {
-    float: left;width: 63%;text-align: center;   
+    float: left;width: 100%;height: auto;
 }
-.dropdown-submenu 
+.formselectcategory 
 {
-    position: relative;
+    float: left;width: 100%;margin-bottom: 15px;
 }
-.dropdown-submenu .dropdown-menu 
+.labeltext
 {
-    top: 0;left: 100%;margin-top: -1px;
+    display: inline-block;margin-bottom: 5px;float: left;font-weight: 700;width: 30%;
 }
-.dropdownstream 
+.form-control 
 {
-    float: left;width: 100%;height: auto;margin-bottom: 20px;
+    display: block;width: 70%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;float: left;
 }
-.dropdownstreamright
+#streambutton
 {
-    float: left;width: 100%;height: auto;margin-bottom: 20px;
+    padding: 7px 10px;font-size: 14px;width: 100px;
 }
-#dropright
-{
-    margin-bottom: 15px;width: 73%;
-}
-.labeltext 
-{
-    float: left;width: auto;height: auto;
-}
-.stream-button
-{
-    float: none;display: block;margin: 0px auto;width: 20%;
-}
-#stream 
-{
-    padding: 7px 20px;background: blue;color: #fff;border-radius: 3px;border: none;text-transform: capitalize;
-}    
